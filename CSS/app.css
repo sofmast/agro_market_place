@@ -625,6 +625,7 @@ img{
     padding:
         18px
         var(--app-padding);
+    z-index: 10000;
 
 }
 
