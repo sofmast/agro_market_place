@@ -7,7 +7,9 @@
 /* =========================================================
    MAIN
 ========================================================= */
-
+:root{
+    --faded:#777;
+}
 .join-main{
 
     width:100%;
@@ -58,19 +60,20 @@
 
 
 .join-hero h1{
+    font-family: roboto, arial;
 
     max-width:330px;
 
     margin:0;
 
     color:
-        var(--text);
+        var(--faded);
 
     font-size:28px;
 
     line-height:1.08;
 
-    font-weight:850;
+    font-weight:900;
 
     letter-spacing:-1px;
 
@@ -137,7 +140,7 @@
     margin:0;
 
     color:
-        var(--text);
+        var(--zyaco);
 
     font-size:16px;
 
@@ -261,7 +264,7 @@
     display:block;
 
     color:
-        var(--text);
+        #cc5858;
 
     font-size:13px;
 
