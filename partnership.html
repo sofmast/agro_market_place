@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#ffffff"
+    >
+
+    <title>
+        Partnership Application | Zyaco Food Market
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="CSS/app.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="CSS/partnership.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="app-header">
+
+    <div class="header-left">
+
+        <button
+            class="icon-button"
+            id="backButton"
+            type="button"
+            aria-label="Go back"
+        >
+            ←
+        </button>
+
+
+        <div class="brand">
+
+            <div class="brand-name">
+
+                <span class="zyaco">
+                    Zyaco Food
+                </span>
+
+                Market
+
+            </div>
+
+
+            <span class="brand-subtitle">
+                Partnership application
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="icon-button"
+        id="cartButton"
+        type="button"
+        aria-label="Shopping cart"
+    >
+
+        🛒
+
+        <span
+            class="cart-badge"
+            id="cartBadge"
+        >
+            0
+        </span>
+
+    </button>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="application-main">
+
+
+    <!-- =================================================
+         PAGE INTRO
+    ================================================= -->
+
+    <section class="application-intro">
+
+        <span class="application-eyebrow">
+            PARTNERSHIP
+        </span>
+
+
+        <h1>
+            Let's build something
+            together.
+        </h1>
+
+
+        <p>
+            Tell us about yourself or your
+            business. Our team will review your
+            application and contact you.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROGRESS
+    ================================================= -->
+
+    <div class="application-progress">
+
+
+        <div class="progress-step active">
+
+            <span>
+                1
+            </span>
+
+            <small>
+                Applicant
+            </small>
+
+        </div>
+
+
+        <div class="progress-line"></div>
+
+
+        <div class="progress-step">
+
+            <span>
+                2
+            </span>
+
+            <small>
+                Contact
+            </small>
+
+        </div>
+
+
+        <div class="progress-line"></div>
+
+
+        <div class="progress-step">
+
+            <span>
+                3
+            </span>
+
+            <small>
+                Partnership
+            </small>
+
+        </div>
+
+
+        <div class="progress-line"></div>
+
+
+        <div class="progress-step">
+
+            <span>
+                4
+            </span>
+
+            <small>
+                Review
+            </small>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         APPLICATION FORM
+    ================================================= -->
+
+    <form
+        id="partnershipForm"
+        class="application-form"
+        novalidate
+    >
+
+
+        <!-- =================================================
+             STEP 1
+        ================================================= -->
+
+        <section
+            class="form-step active"
+            data-step="1"
+        >
+
+            <div class="form-section-heading">
+
+                <span>
+                    STEP 1
+                </span>
+
+                <h2>
+                    About you
+                </h2>
+
+                <p>
+                    Tell us who we will be working with.
+                </p>
+
+            </div>
+
+
+            <!-- Business type -->
+
+            <div class="form-field">
+
+                <label for="businessType">
+
+                    Business type
+
+                    <span>*</span>
+
+                </label>
+
+
+                <select
+                    id="businessType"
+                    name="businessType"
+                    required
+                >
+
+                    <option value="">
+                        Select business type
+                    </option>
+
+                    <option value="individual">
+                        Individual
+                    </option>
+
+                    <option value="small_business">
+                        Small Business
+                    </option>
+
+                    <option value="company">
+                        Company
+                    </option>
+
+                    <option value="organization">
+                        Organization
+                    </option>
+
+                </select>
+
+                <small class="field-error"></small>
+
+            </div>
+
+
+
+            <!-- Business name -->
+
+            <div class="form-field">
+
+                <label for="businessName">
+
+                    Business / organization name
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="businessName"
+                    name="businessName"
+                    placeholder="Enter business name"
+                    autocomplete="organization"
+                    required
+                >
+
+                <small class="field-error"></small>
+
+            </div>
+
+
+
+            <!-- Contact person -->
+
+            <div class="form-field">
+
+                <label for="contactPerson">
+
+                    Contact person
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="contactPerson"
+                    name="contactPerson"
+                    placeholder="Full name"
+                    autocomplete="name"
+                    required
+                >
+
+                <small class="field-error"></small>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             STEP 2
+        ================================================= -->
+
+        <section
+            class="form-step"
+            data-step="2"
+        >
+
+            <div class="form-section-heading">
+
+                <span>
+                    STEP 2
+                </span>
+
+                <h2>
+                    Contact information
+                </h2>
+
+                <p>
+                    How should our team contact you?
+                </p>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="phone">
+
+                    Phone number
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+260 ..."
+                    autocomplete="tel"
+                    inputmode="tel"
+                    required
+                >
+
+                <small class="field-error"></small>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="email">
+
+                    Email address
+
+                </label>
+
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                >
+
+                <small class="field-error"></small>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="location">
+
+                    Business location
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    placeholder="City / area"
+                    autocomplete="address-level2"
+                    required
+                >
+
+                <small class="field-error"></small>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             STEP 3
+        ================================================= -->
+
+        <section
+            class="form-step"
+            data-step="3"
+        >
+
+            <div class="form-section-heading">
+
+                <span>
+                    STEP 3
+                </span>
+
+                <h2>
+                    Partnership details
+                </h2>
+
+                <p>
+                    Tell us how you would like to
+                    work with Zyaco.
+                </p>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="partnershipType">
+
+                    Partnership type
+
+                    <span>*</span>
+
+                </label>
+
+
+                <select
+                    id="partnershipType"
+                    name="partnershipType"
+                    required
+                >
+
+                    <option value="">
+                        Select partnership type
+                    </option>
+
+                    <option value="business_partner">
+                        Business Partner
+                    </option>
+
+                    <option value="marketing_partner">
+                        Marketing Partner
+                    </option>
+
+                    <option value="distribution_partner">
+                        Distribution Partner
+                    </option>
+
+                    <option value="strategic_partner">
+                        Strategic Partner
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <small class="field-error"></small>
+
+            </div>
+
+
+
+            <div class="form-field">
+
+                <label for="businessDescription">
+
+                    Tell us about your business
+
+                    <span>*</span>
+
+                </label>
+
+
+                <textarea
+                    id="businessDescription"
+                    name="businessDescription"
+                    rows="5"
+                    maxlength="1000"
+                    placeholder="Briefly describe your business..."
+                    required
+                ></textarea>
+
+
+                <div class="textarea-meta">
+
+                    <small class="field-error"></small>
+
+                    <span id="descriptionCount">
+                        0 / 1000
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-field">
+
+                <label for="partnershipMessage">
+
+                    How would you like to
+                    work with us?
+
+                </label>
+
+
+                <textarea
+                    id="partnershipMessage"
+                    name="partnershipMessage"
+                    rows="4"
+                    maxlength="1000"
+                    placeholder="Tell us about your idea or proposal..."
+                ></textarea>
+
+
+                <div class="textarea-meta">
+
+                    <small class="field-error"></small>
+
+                    <span id="messageCount">
+                        0 / 1000
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             STEP 4
+        ================================================= -->
+
+        <section
+            class="form-step"
+            data-step="4"
+        >
+
+            <div class="form-section-heading">
+
+                <span>
+                    STEP 4
+                </span>
+
+                <h2>
+                    Review application
+                </h2>
+
+                <p>
+                    Check your information before
+                    submitting.
+                </p>
+
+            </div>
+
+
+            <div
+                class="application-review"
+                id="applicationReview"
+            >
+
+                <!-- Generated by JavaScript -->
+
+            </div>
+
+
+            <div class="application-notice">
+
+                <span>
+                    ✓
+                </span>
+
+                <p>
+                    Your information will be submitted
+                    securely for review by the Zyaco
+                    Food Market team.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FORM NAVIGATION
+        ================================================= -->
+
+        <div class="form-navigation">
+
+
+            <button
+                type="button"
+                class="form-button secondary"
+                id="previousButton"
+            >
+                Back
+            </button>
+
+
+            <button
+                type="button"
+                class="form-button primary"
+                id="nextButton"
+            >
+                Continue
+            </button>
+
+
+            <button
+                type="submit"
+                class="form-button primary hidden"
+                id="submitButton"
+            >
+                Submit Application
+            </button>
+
+
+        </div>
+
+
+    </form>
+
+
+</main>
+
+
+
+<script src="JS/partnership.js"></script>
+
+</body>
+
+</html>

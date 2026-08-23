@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        user-scalable=no"
+    >
+
+    <meta
+        name="theme-color"
+        content="#ffffff"
+    >
+
+    <title>Products | Zyaco Market Place</title>
+
+    <link
+        rel="stylesheet"
+        href="CSS/app.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="CSS/products-page.css"
+    >
+
+</head>
+
+
+<body>
+
+<div id="app">
+
+
+    <!-- HEADER -->
+
+    <header class="app-header">
+
+        <div class="header-left">
+
+            <button
+                class="icon-button"
+                type="button"
+                onclick="history.back()"
+            >
+                ←
+            </button>
+
+            <div class="brand">
+
+                <span class="brand-name">
+                    Products
+                </span>
+
+                <span class="brand-subtitle">
+                    Manage your catalogue
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="icon-button"
+            type="button"
+            onclick="location.href='add-product.html'"
+        >
+            +
+        </button>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main class="products-main">
+
+
+        <!-- SEARCH -->
+
+        <div class="products-search">
+
+            <span>
+                ⌕
+            </span>
+
+            <input
+                type="search"
+                id="productsSearch"
+                placeholder="Search products..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+
+        <!-- FILTER -->
+
+        <div
+            class="products-filters"
+            id="productsFilters"
+        >
+
+            <!-- Generated -->
+
+        </div>
+
+
+
+        <!-- SUMMARY -->
+
+        <div class="products-summary">
+
+            <div>
+
+                <strong id="productCount">
+                    0
+                </strong>
+
+                <span>
+                    products
+                </span>
+
+            </div>
+
+
+            <button
+                id="sortButton"
+                type="button"
+            >
+                Newest ↓
+            </button>
+
+        </div>
+
+
+
+        <!-- PRODUCT GRID -->
+
+        <div
+            class="management-grid"
+            id="managementGrid"
+        >
+
+            <!-- Generated -->
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+<script src="JS/storage.js"></script>
+
+<script src="JS/products-page.js"></script>
+
+
+</body>
+
+</html>

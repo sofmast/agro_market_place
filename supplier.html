@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#ffffff"
+    >
+
+    <title>
+        Become a Supplier | Zyaco Food Market
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="CSS/app.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="CSS/supplier.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="app-header">
+
+    <div class="header-left">
+
+        <button
+            class="icon-button"
+            id="backButton"
+            type="button"
+            aria-label="Go back"
+        >
+            ←
+        </button>
+
+
+        <div class="brand">
+
+            <div class="brand-name">
+
+                <span class="zyaco">
+                    Zyaco Food
+                </span>
+
+                Market
+
+            </div>
+
+
+            <span class="brand-subtitle">
+                Supplier application
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="icon-button"
+        id="cartButton"
+        type="button"
+        aria-label="Shopping cart"
+    >
+
+        🛒
+
+        <span
+            class="cart-badge"
+            id="cartBadge"
+        >
+            0
+        </span>
+
+    </button>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="supplier-main">
+
+
+    <!-- =================================================
+         INTRO
+    ================================================= -->
+
+    <section class="supplier-intro">
+
+        <span class="supplier-eyebrow">
+            BECOME A SUPPLIER
+        </span>
+
+
+        <h1>
+            Supply quality products
+            to our market.
+        </h1>
+
+
+        <p>
+            Join the Zyaco Food Market supplier
+            network and introduce your products
+            to more customers.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROGRESS
+    ================================================= -->
+
+    <div class="supplier-progress">
+
+
+        <div
+            class="supplier-progress-step active"
+        >
+
+            <span>1</span>
+
+            <small>
+                Business
+            </small>
+
+        </div>
+
+
+        <div class="supplier-progress-line"></div>
+
+
+        <div class="supplier-progress-step">
+
+            <span>2</span>
+
+            <small>
+                Contact
+            </small>
+
+        </div>
+
+
+        <div class="supplier-progress-line"></div>
+
+
+        <div class="supplier-progress-step">
+
+            <span>3</span>
+
+            <small>
+                Supply
+            </small>
+
+        </div>
+
+
+        <div class="supplier-progress-line"></div>
+
+
+        <div class="supplier-progress-step">
+
+            <span>4</span>
+
+            <small>
+                Review
+            </small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         FORM
+    ================================================= -->
+
+    <form
+        id="supplierForm"
+        class="supplier-form"
+        novalidate
+    >
+
+
+        <!-- =================================================
+             STEP 1
+        ================================================= -->
+
+        <section
+            class="supplier-step active"
+            data-step="1"
+        >
+
+            <div class="supplier-section-heading">
+
+                <span>
+                    STEP 1
+                </span>
+
+                <h2>
+                    Your business
+                </h2>
+
+                <p>
+                    Tell us about the business
+                    that will supply our market.
+                </p>
+
+            </div>
+
+
+            <div class="supplier-field">
+
+                <label for="supplierBusinessType">
+
+                    Business type
+
+                    <span>*</span>
+
+                </label>
+
+
+                <select
+                    id="supplierBusinessType"
+                    name="businessType"
+                    required
+                >
+
+                    <option value="">
+                        Select business type
+                    </option>
+
+                    <option value="individual">
+                        Individual
+                    </option>
+
+                    <option value="farmer">
+                        Farmer
+                    </option>
+
+                    <option value="small_business">
+                        Small Business
+                    </option>
+
+                    <option value="company">
+                        Company
+                    </option>
+
+                    <option value="cooperative">
+                        Cooperative
+                    </option>
+
+                    <option value="organization">
+                        Organization
+                    </option>
+
+                </select>
+
+
+                <small class="supplier-error"></small>
+
+            </div>
+
+
+            <div class="supplier-field">
+
+                <label for="supplierBusinessName">
+
+                    Business / farm name
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="supplierBusinessName"
+                    name="businessName"
+                    placeholder="Enter business or farm name"
+                    autocomplete="organization"
+                    required
+                >
+
+
+                <small class="supplier-error"></small>
+
+            </div>
+
+
+            <div class="supplier-field">
+
+                <label for="supplierContactPerson">
+
+                    Contact person
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="supplierContactPerson"
+                    name="contactPerson"
+                    placeholder="Full name"
+                    autocomplete="name"
+                    required
+                >
+
+
+                <small class="supplier-error"></small>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STEP 2
+        ================================================= -->
+
+        <section
+            class="supplier-step"
+            data-step="2"
+        >
+
+            <div class="supplier-section-heading">
+
+                <span>
+                    STEP 2
+                </span>
+
+                <h2>
+                    Contact information
+                </h2>
+
+                <p>
+                    Tell us where and how we can
+                    reach you.
+                </p>
+
+            </div>
+
+
+            <div class="supplier-field">
+
+                <label for="supplierPhone">
+
+                    Phone number
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="tel"
+                    id="supplierPhone"
+                    name="phone"
+                    placeholder="+260 ..."
+                    autocomplete="tel"
+                    inputmode="tel"
+                    required
+                >
+
+
+                <small class="supplier-error"></small>
+
+            </div>
+
+
+            <div class="supplier-field">
+
+                <label for="supplierEmail">
+
+                    Email address
+
+                </label>
+
+
+                <input
+                    type="email"
+                    id="supplierEmail"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                >
+
+
+                <small class="supplier-error"></small>
+
+            </div>
+
+
+            <div class="supplier-field">
+
+                <label for="supplierLocation">
+
+                    Supply location
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="supplierLocation"
+                    name="location"
+                    placeholder="City / district / area"
+                    autocomplete="address-level2"
+                    required
+                >
+
+
+                <small class="supplier-error"></small>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STEP 3
+        ================================================= -->
+
+        <section
+            class="supplier-step"
+            data-step="3"
+        >
+
+            <div class="supplier-section-heading">
+
+                <span>
+                    STEP 3
+                </span>
+
+                <h2>
+                    What do you supply?
+                </h2>
+
+                <p>
+                    Give us information about the
+                    products you can provide.
+                </p>
+
+            </div>
+
+
+            <div class="supplier-field">
+
+                <label for="supplierCategory">
+
+                    Main product category
+
+                    <span>*</span>
+
+                </label>
+
+
+                <select
+                    id="supplierCategory"
+                    name="productCategory"
+                    required
+                >
+
+                    <option value="">
+                        Select category
+                    </option>
+
+                    <option value="fresh_produce">
+                        Fresh Produce
+                    </option>
+
+                    <option value="grains">
+                        Grains & Cereals
+                    </option>
+
+                    <option value="vegetables">
+                        Vegetables
+                    </option>
+
+                    <option value="fruits">
+                        Fruits
+                    </option>
+
+                    <option value="meat">
+                        Meat & Poultry
+                    </option>
+
+                    <option value="dairy">
+                        Dairy Products
+                    </option>
+
+                    <option value="processed_foods">
+                        Processed Foods
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <small class="supplier-error"></small>
+
+            </div>
+
+
+            <div class="supplier-field">
+
+                <label for="supplierProducts">
+
+                    Products you supply
+
+                    <span>*</span>
+
+                </label>
+
+
+                <textarea
+                    id="supplierProducts"
+                    name="productsSupplied"
+                    rows="4"
+                    maxlength="1000"
+                    placeholder="Example: tomatoes, onions, potatoes..."
+                    required
+                ></textarea>
+
+
+                <div class="supplier-textarea-meta">
+
+                    <small class="supplier-error"></small>
+
+                    <span id="productsCount">
+                        0 / 1000
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="supplier-field">
+
+                <label for="supplierCapacity">
+
+                    Estimated supply capacity
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="supplierCapacity"
+                    name="supplyCapacity"
+                    placeholder="Example: 500 kg per week"
+                    required
+                >
+
+
+                <small class="supplier-error"></small>
+
+            </div>
+
+
+            <div class="supplier-field">
+
+                <label for="deliveryCapability">
+
+                    Delivery capability
+
+                    <span>*</span>
+
+                </label>
+
+
+                <select
+                    id="deliveryCapability"
+                    name="deliveryCapability"
+                    required
+                >
+
+                    <option value="">
+                        Select delivery option
+                    </option>
+
+                    <option value="supplier_delivery">
+                        I can deliver
+                    </option>
+
+                    <option value="market_collection">
+                        Zyaco can collect
+                    </option>
+
+                    <option value="both">
+                        Either option
+                    </option>
+
+                    <option value="discuss">
+                        To be discussed
+                    </option>
+
+                </select>
+
+
+                <small class="supplier-error"></small>
+
+            </div>
+
+
+            <div class="supplier-field">
+
+                <label for="supplierDescription">
+
+                    Tell us about your supply operation
+
+                </label>
+
+
+                <textarea
+                    id="supplierDescription"
+                    name="supplyDescription"
+                    rows="4"
+                    maxlength="1000"
+                    placeholder="Tell us anything important about your products or supply operation..."
+                ></textarea>
+
+
+                <div class="supplier-textarea-meta">
+
+                    <small class="supplier-error"></small>
+
+                    <span id="descriptionCount">
+                        0 / 1000
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STEP 4
+        ================================================= -->
+
+        <section
+            class="supplier-step"
+            data-step="4"
+        >
+
+            <div class="supplier-section-heading">
+
+                <span>
+                    STEP 4
+                </span>
+
+                <h2>
+                    Review application
+                </h2>
+
+                <p>
+                    Check your information before
+                    submitting.
+                </p>
+
+            </div>
+
+
+            <div
+                class="supplier-review"
+                id="supplierReview"
+            ></div>
+
+
+            <div class="supplier-notice">
+
+                <span>
+                    ✓
+                </span>
+
+                <p>
+                    Your application will be reviewed
+                    by the Zyaco Food Market team.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             NAVIGATION
+        ================================================= -->
+
+        <div class="supplier-navigation">
+
+
+            <button
+                type="button"
+                class="supplier-button secondary"
+                id="supplierPreviousButton"
+            >
+                Back
+            </button>
+
+
+            <button
+                type="button"
+                class="supplier-button primary"
+                id="supplierNextButton"
+            >
+                Continue
+            </button>
+
+
+            <button
+                type="submit"
+                class="supplier-button primary hidden"
+                id="supplierSubmitButton"
+            >
+                Submit Application
+            </button>
+
+
+        </div>
+
+    </form>
+
+</main>
+
+
+
+<script src="JS/supplier.js"></script>
+
+</body>
+
+</html>

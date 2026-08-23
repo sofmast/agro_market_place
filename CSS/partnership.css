@@ -1,0 +1,1173 @@
+/* =========================================================
+   ZYACO FOOD MARKET
+   PARTNERSHIP APPLICATION
+   Mobile-first / Backend-ready UI
+========================================================= */
+
+
+/* =========================================================
+   APPLICATION MAIN
+========================================================= */
+
+.application-main{
+
+    width:100%;
+
+    min-height:100vh;
+
+    padding:
+        18px
+        var(--app-padding)
+        calc(
+            35px +
+            env(safe-area-inset-bottom)
+        );
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.application-intro{
+
+    padding:
+        4px
+        2px
+        5px;
+
+}
+
+
+.application-eyebrow{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    color:
+        var(--primary);
+
+    font-size:9px;
+
+    line-height:1;
+
+    font-weight:850;
+
+    letter-spacing:1.4px;
+
+}
+
+
+.application-intro h1{
+
+    max-width:340px;
+
+    margin:0;
+
+    color:
+        var(--text);
+
+    font-size:26px;
+
+    line-height:1.1;
+
+    font-weight:850;
+
+    letter-spacing:-.9px;
+
+}
+
+
+.application-intro p{
+
+    max-width:350px;
+
+    margin:
+        9px
+        0
+        0;
+
+    color:
+        var(--text-secondary);
+
+    font-size:10px;
+
+    line-height:1.55;
+
+}
+
+
+/* =========================================================
+   PROGRESS CONTAINER
+========================================================= */
+
+.application-progress{
+
+    width:100%;
+
+    margin:
+        24px
+        0
+        25px;
+
+    display:flex;
+
+    align-items:flex-start;
+
+}
+
+
+.progress-step{
+
+    flex:
+        0 0 auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:5px;
+
+}
+
+
+.progress-step span{
+
+    width:27px;
+
+    height:27px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:50%;
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text-secondary);
+
+    font-size:9px;
+
+    font-weight:800;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+
+}
+
+
+.progress-step small{
+
+    color:
+        var(--text-secondary);
+
+    font-size:7px;
+
+    line-height:1;
+
+    font-weight:650;
+
+    white-space:nowrap;
+
+}
+
+
+.progress-step.active span{
+
+    background:
+        var(--primary);
+
+    border-color:
+        var(--primary);
+
+    color:#ffffff;
+
+    transform:
+        scale(1.05);
+
+}
+
+
+.progress-step.active small{
+
+    color:
+        var(--primary);
+
+    font-weight:800;
+
+}
+
+
+/* =========================================================
+   COMPLETED STEP
+========================================================= */
+
+.progress-step.completed span{
+
+    background:
+        var(--primary);
+
+    border-color:
+        var(--primary);
+
+    color:#ffffff;
+
+}
+
+
+.progress-step.completed small{
+
+    color:
+        var(--text);
+
+}
+
+
+/* =========================================================
+   PROGRESS LINE
+========================================================= */
+
+.progress-line{
+
+    flex:1;
+
+    height:2px;
+
+    margin:
+        13px
+        5px
+        0;
+
+    background:
+        var(--border);
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+
+.progress-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    width:0;
+
+    background:
+        var(--primary);
+
+    transition:
+        width .3s ease;
+
+}
+
+
+.progress-line.completed::after{
+
+    width:100%;
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.application-form{
+
+    width:100%;
+
+}
+
+
+/* =========================================================
+   FORM STEP
+========================================================= */
+
+.form-step{
+
+    display:none;
+
+    animation:
+        stepEnter .28s
+        ease both;
+
+}
+
+
+.form-step.active{
+
+    display:block;
+
+}
+
+
+@keyframes stepEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateX(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   STEP HEADING
+========================================================= */
+
+.form-section-heading{
+
+    margin-bottom:18px;
+
+}
+
+
+.form-section-heading span{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:
+        var(--primary);
+
+    font-size:8px;
+
+    line-height:1;
+
+    font-weight:850;
+
+    letter-spacing:1.1px;
+
+}
+
+
+.form-section-heading h2{
+
+    margin:0;
+
+    color:
+        var(--text);
+
+    font-size:19px;
+
+    line-height:1.15;
+
+    font-weight:800;
+
+    letter-spacing:-.4px;
+
+}
+
+
+.form-section-heading p{
+
+    margin:
+        6px
+        0
+        0;
+
+    color:
+        var(--text-secondary);
+
+    font-size:9px;
+
+    line-height:1.5;
+
+}
+
+
+/* =========================================================
+   FORM FIELD
+========================================================= */
+
+.form-field{
+
+    width:100%;
+
+    margin-bottom:15px;
+
+}
+
+
+.form-field label{
+
+    display:block;
+
+    margin:
+        0
+        0
+        6px
+        2px;
+
+    color:
+        var(--text);
+
+    font-size:10px;
+
+    line-height:1.2;
+
+    font-weight:750;
+
+}
+
+
+.form-field label span{
+
+    color:
+        var(--danger);
+
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.form-field input,
+.form-field select,
+.form-field textarea{
+
+    width:100%;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:13px;
+
+    outline:none;
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text);
+
+    font-family:inherit;
+
+    font-size:11px;
+
+    transition:
+        border-color .18s ease,
+        box-shadow .18s ease,
+        background .18s ease;
+
+}
+
+
+/* INPUT */
+
+.form-field input,
+.form-field select{
+
+    height:46px;
+
+    padding:
+        0
+        13px;
+
+}
+
+
+/* TEXTAREA */
+
+.form-field textarea{
+
+    min-height:110px;
+
+    padding:
+        12px
+        13px;
+
+    resize:none;
+
+    line-height:1.5;
+
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.form-field input::placeholder,
+.form-field textarea::placeholder{
+
+    color:#a4a8ae;
+
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.form-field select{
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    padding-right:36px;
+
+    background-image:
+        linear-gradient(45deg,transparent 50%,#888 50%),
+        linear-gradient(135deg,#888 50%,transparent 50%);
+
+    background-position:
+        calc(100% - 17px) 19px,
+        calc(100% - 12px) 19px;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat:no-repeat;
+
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus{
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(40,120,255,.08);
+
+}
+
+
+/* =========================================================
+   VALID FIELD
+========================================================= */
+
+.form-field.valid input,
+.form-field.valid select,
+.form-field.valid textarea{
+
+    border-color:
+        var(--success);
+
+}
+
+
+/* =========================================================
+   INVALID FIELD
+========================================================= */
+
+.form-field.invalid input,
+.form-field.invalid select,
+.form-field.invalid textarea{
+
+    border-color:
+        var(--danger);
+
+    background:
+        #fffafa;
+
+}
+
+
+/* =========================================================
+   FIELD ERROR
+========================================================= */
+
+.field-error{
+
+    display:block;
+
+    min-height:0;
+
+    margin:
+        4px
+        2px
+        0;
+
+    color:
+        var(--danger);
+
+    font-size:8px;
+
+    line-height:1.35;
+
+}
+
+
+/* =========================================================
+   TEXTAREA META
+========================================================= */
+
+.textarea-meta{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    justify-content:space-between;
+
+}
+
+
+.textarea-meta .field-error{
+
+    flex:1;
+
+}
+
+
+.textarea-meta > span{
+
+    flex:
+        0 0 auto;
+
+    margin-top:4px;
+
+    color:
+        var(--text-secondary);
+
+    font-size:8px;
+
+}
+
+
+/* =========================================================
+   REVIEW
+========================================================= */
+
+.application-review{
+
+    width:100%;
+
+    overflow:hidden;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:17px;
+
+    background:
+        var(--surface);
+
+}
+
+
+.review-group{
+
+    padding:
+        13px;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.review-group:last-child{
+
+    border-bottom:0;
+
+}
+
+
+.review-group-title{
+
+    margin-bottom:9px;
+
+    color:
+        var(--primary);
+
+    font-size:8px;
+
+    line-height:1;
+
+    font-weight:850;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+
+.review-row{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    padding:
+        5px
+        0;
+
+}
+
+
+.review-label{
+
+    flex:
+        0 0 38%;
+
+    color:
+        var(--text-secondary);
+
+    font-size:9px;
+
+    line-height:1.4;
+
+}
+
+
+.review-value{
+
+    flex:1;
+
+    color:
+        var(--text);
+
+    font-size:9px;
+
+    line-height:1.4;
+
+    font-weight:700;
+
+    text-align:right;
+
+    overflow-wrap:anywhere;
+
+}
+
+
+/* =========================================================
+   SUBMISSION NOTICE
+========================================================= */
+
+.application-notice{
+
+    margin-top:12px;
+
+    padding:
+        11px;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:9px;
+
+    border-radius:14px;
+
+    background:
+        var(--surface-soft);
+
+}
+
+
+.application-notice > span{
+
+    width:24px;
+
+    height:24px;
+
+    flex:
+        0 0 24px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:8px;
+
+    background:
+        var(--success);
+
+    color:#ffffff;
+
+    font-size:11px;
+
+    font-weight:800;
+
+}
+
+
+.application-notice p{
+
+    margin:0;
+
+    color:
+        var(--text-secondary);
+
+    font-size:8px;
+
+    line-height:1.5;
+
+}
+
+
+/* =========================================================
+   FORM NAVIGATION
+========================================================= */
+
+.form-navigation{
+
+    width:100%;
+
+    margin-top:24px;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(90px,.7fr)
+        minmax(0,1.3fr);
+
+    gap:8px;
+
+}
+
+
+.form-button{
+
+    height:46px;
+
+    border:0;
+
+    border-radius:13px;
+
+    font-family:inherit;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    -webkit-tap-highlight-color:transparent;
+
+    transition:
+        transform .15s ease,
+        opacity .15s ease,
+        background .15s ease;
+
+}
+
+
+.form-button:active{
+
+    transform:
+        scale(.97);
+
+}
+
+
+.form-button.primary{
+
+    background:
+        var(--primary);
+
+    color:#ffffff;
+
+}
+
+
+.form-button.primary:disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+}
+
+
+.form-button.secondary{
+
+    background:
+        var(--surface-soft);
+
+    color:
+        var(--text);
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+/* =========================================================
+   HIDDEN
+========================================================= */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+
+/* =========================================================
+   SUBMITTING
+========================================================= */
+
+.form-button.submitting{
+
+    pointer-events:none;
+
+    opacity:.7;
+
+}
+
+
+.form-button.submitting::after{
+
+    content:"";
+
+    display:inline-block;
+
+    width:11px;
+
+    height:11px;
+
+    margin-left:7px;
+
+    vertical-align:-1px;
+
+    border:
+        2px solid
+        rgba(255,255,255,.4);
+
+    border-top-color:
+        #ffffff;
+
+    border-radius:50%;
+
+    animation:
+        buttonSpin .65s linear infinite;
+
+}
+
+
+@keyframes buttonSpin{
+
+    to{
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   SUCCESS STATE
+========================================================= */
+
+.application-success{
+
+    padding:
+        35px
+        15px;
+
+    text-align:center;
+
+    animation:
+        stepEnter .3s ease both;
+
+}
+
+
+.success-icon{
+
+    width:65px;
+
+    height:65px;
+
+    margin:
+        0
+        auto
+        14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:21px;
+
+    background:
+        #eaf8ee;
+
+    color:
+        var(--success);
+
+    font-size:27px;
+
+    font-weight:800;
+
+}
+
+
+.application-success h2{
+
+    margin:0;
+
+    color:
+        var(--text);
+
+    font-size:20px;
+
+    font-weight:850;
+
+}
+
+
+.application-success p{
+
+    max-width:300px;
+
+    margin:
+        8px
+        auto
+        0;
+
+    color:
+        var(--text-secondary);
+
+    font-size:10px;
+
+    line-height:1.55;
+
+}
+
+
+.application-reference{
+
+    margin-top:15px;
+
+    padding:
+        11px;
+
+    border:
+        1px dashed var(--border);
+
+    border-radius:12px;
+
+    background:
+        var(--surface-soft);
+
+}
+
+
+.application-reference span{
+
+    display:block;
+
+    color:
+        var(--text-secondary);
+
+    font-size:8px;
+
+}
+
+
+.application-reference strong{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:
+        var(--primary);
+
+    font-size:12px;
+
+    letter-spacing:.5px;
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:360px){
+
+    .application-main{
+
+        padding-left:10px;
+
+        padding-right:10px;
+
+    }
+
+
+    .application-intro h1{
+
+        font-size:24px;
+
+    }
+
+
+    .progress-step small{
+
+        font-size:6px;
+
+    }
+
+
+    .progress-line{
+
+        margin-left:3px;
+
+        margin-right:3px;
+
+    }
+
+}

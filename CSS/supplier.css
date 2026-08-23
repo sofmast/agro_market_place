@@ -1,0 +1,1097 @@
+/* =========================================================
+   ZYACO FOOD MARKET
+   SUPPLIER APPLICATION
+========================================================= */
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.supplier-main{
+
+    width:100%;
+
+    min-height:100vh;
+
+    padding:
+        18px
+        var(--app-padding)
+        calc(
+            35px +
+            env(safe-area-inset-bottom)
+        );
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.supplier-intro{
+
+    padding:
+        4px
+        2px
+        5px;
+
+}
+
+
+.supplier-eyebrow{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    color:
+        var(--primary);
+
+    font-size:9px;
+
+    line-height:1;
+
+    font-weight:850;
+
+    letter-spacing:1.4px;
+
+}
+
+
+.supplier-intro h1{
+
+    max-width:340px;
+
+    margin:0;
+
+    color:
+        var(--text);
+
+    font-size:26px;
+
+    line-height:1.1;
+
+    font-weight:850;
+
+    letter-spacing:-.9px;
+
+}
+
+
+.supplier-intro p{
+
+    max-width:350px;
+
+    margin:
+        9px
+        0
+        0;
+
+    color:
+        var(--text-secondary);
+
+    font-size:10px;
+
+    line-height:1.55;
+
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.supplier-progress{
+
+    width:100%;
+
+    margin:
+        24px
+        0
+        25px;
+
+    display:flex;
+
+    align-items:flex-start;
+
+}
+
+
+.supplier-progress-step{
+
+    flex:
+        0 0 auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:5px;
+
+}
+
+
+.supplier-progress-step span{
+
+    width:27px;
+
+    height:27px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:50%;
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text-secondary);
+
+    font-size:9px;
+
+    font-weight:800;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.supplier-progress-step small{
+
+    color:
+        var(--text-secondary);
+
+    font-size:7px;
+
+    font-weight:650;
+
+    white-space:nowrap;
+
+}
+
+
+.supplier-progress-step.active span,
+.supplier-progress-step.completed span{
+
+    background:
+        var(--primary);
+
+    border-color:
+        var(--primary);
+
+    color:#ffffff;
+
+}
+
+
+.supplier-progress-step.active small{
+
+    color:
+        var(--primary);
+
+    font-weight:800;
+
+}
+
+
+.supplier-progress-line{
+
+    position:relative;
+
+    flex:1;
+
+    height:2px;
+
+    margin:
+        13px
+        5px
+        0;
+
+    background:
+        var(--border);
+
+    overflow:hidden;
+
+}
+
+
+.supplier-progress-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    width:0;
+
+    background:
+        var(--primary);
+
+    transition:
+        width .3s ease;
+
+}
+
+
+.supplier-progress-line.completed::after{
+
+    width:100%;
+
+}
+
+
+/* =========================================================
+   STEPS
+========================================================= */
+
+.supplier-step{
+
+    display:none;
+
+    animation:
+        supplierStepIn
+        .28s ease both;
+
+}
+
+
+.supplier-step.active{
+
+    display:block;
+
+}
+
+
+@keyframes supplierStepIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateX(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.supplier-section-heading{
+
+    margin-bottom:18px;
+
+}
+
+
+.supplier-section-heading > span{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:
+        var(--primary);
+
+    font-size:8px;
+
+    font-weight:850;
+
+    letter-spacing:1.1px;
+
+}
+
+
+.supplier-section-heading h2{
+
+    margin:0;
+
+    color:
+        var(--text);
+
+    font-size:19px;
+
+    line-height:1.15;
+
+    font-weight:800;
+
+}
+
+
+.supplier-section-heading p{
+
+    margin:
+        6px
+        0
+        0;
+
+    color:
+        var(--text-secondary);
+
+    font-size:9px;
+
+    line-height:1.5;
+
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.supplier-field{
+
+    width:100%;
+
+    margin-bottom:15px;
+
+}
+
+
+.supplier-field label{
+
+    display:block;
+
+    margin:
+        0
+        0
+        6px
+        2px;
+
+    color:
+        var(--text);
+
+    font-size:10px;
+
+    font-weight:750;
+
+}
+
+
+.supplier-field label span{
+
+    color:
+        var(--danger);
+
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+========================================================= */
+
+.supplier-field input,
+.supplier-field select,
+.supplier-field textarea{
+
+    width:100%;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:13px;
+
+    outline:none;
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text);
+
+    font-family:inherit;
+
+    font-size:11px;
+
+    transition:
+        border-color .18s ease,
+        box-shadow .18s ease,
+        background .18s ease;
+
+}
+
+
+.supplier-field input,
+.supplier-field select{
+
+    height:46px;
+
+    padding:
+        0
+        13px;
+
+}
+
+
+.supplier-field textarea{
+
+    min-height:105px;
+
+    padding:
+        12px
+        13px;
+
+    resize:none;
+
+    line-height:1.5;
+
+}
+
+
+.supplier-field input::placeholder,
+.supplier-field textarea::placeholder{
+
+    color:#a4a8ae;
+
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.supplier-field select{
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    padding-right:36px;
+
+    background-image:
+        linear-gradient(
+            45deg,
+            transparent 50%,
+            #888 50%
+        ),
+        linear-gradient(
+            135deg,
+            #888 50%,
+            transparent 50%
+        );
+
+    background-position:
+        calc(100% - 17px) 19px,
+        calc(100% - 12px) 19px;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat:no-repeat;
+
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.supplier-field input:focus,
+.supplier-field select:focus,
+.supplier-field textarea:focus{
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(40,120,255,.08);
+
+}
+
+
+/* =========================================================
+   VALID / INVALID
+========================================================= */
+
+.supplier-field.valid input,
+.supplier-field.valid select,
+.supplier-field.valid textarea{
+
+    border-color:
+        var(--success);
+
+}
+
+
+.supplier-field.invalid input,
+.supplier-field.invalid select,
+.supplier-field.invalid textarea{
+
+    border-color:
+        var(--danger);
+
+    background:
+        #fffafa;
+
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.supplier-error{
+
+    display:block;
+
+    margin:
+        4px
+        2px
+        0;
+
+    color:
+        var(--danger);
+
+    font-size:8px;
+
+    line-height:1.35;
+
+}
+
+
+/* =========================================================
+   TEXTAREA META
+========================================================= */
+
+.supplier-textarea-meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+
+.supplier-textarea-meta .supplier-error{
+
+    flex:1;
+
+}
+
+
+.supplier-textarea-meta > span{
+
+    margin-top:4px;
+
+    color:
+        var(--text-secondary);
+
+    font-size:8px;
+
+}
+
+
+/* =========================================================
+   REVIEW
+========================================================= */
+
+.supplier-review{
+
+    width:100%;
+
+    overflow:hidden;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:17px;
+
+    background:
+        var(--surface);
+
+}
+
+
+.supplier-review-group{
+
+    padding:13px;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.supplier-review-group:last-child{
+
+    border-bottom:0;
+
+}
+
+
+.supplier-review-title{
+
+    margin-bottom:9px;
+
+    color:
+        var(--primary);
+
+    font-size:8px;
+
+    font-weight:850;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+
+.supplier-review-row{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    padding:
+        5px
+        0;
+
+}
+
+
+.supplier-review-label{
+
+    flex:
+        0 0 38%;
+
+    color:
+        var(--text-secondary);
+
+    font-size:9px;
+
+    line-height:1.4;
+
+}
+
+
+.supplier-review-value{
+
+    flex:1;
+
+    color:
+        var(--text);
+
+    font-size:9px;
+
+    line-height:1.4;
+
+    font-weight:700;
+
+    text-align:right;
+
+    overflow-wrap:anywhere;
+
+}
+
+
+/* =========================================================
+   NOTICE
+========================================================= */
+
+.supplier-notice{
+
+    margin-top:12px;
+
+    padding:11px;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:9px;
+
+    border-radius:14px;
+
+    background:
+        var(--surface-soft);
+
+}
+
+
+.supplier-notice > span{
+
+    width:24px;
+
+    height:24px;
+
+    flex:0 0 24px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:8px;
+
+    background:
+        var(--success);
+
+    color:#ffffff;
+
+    font-size:11px;
+
+    font-weight:800;
+
+}
+
+
+.supplier-notice p{
+
+    margin:0;
+
+    color:
+        var(--text-secondary);
+
+    font-size:8px;
+
+    line-height:1.5;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.supplier-navigation{
+
+    width:100%;
+
+    margin-top:24px;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(90px,.7fr)
+        minmax(0,1.3fr);
+
+    gap:8px;
+
+}
+
+
+.supplier-button{
+
+    height:46px;
+
+    border-radius:13px;
+
+    font-family:inherit;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    -webkit-tap-highlight-color:transparent;
+
+    transition:
+        transform .15s ease,
+        opacity .15s ease;
+
+}
+
+
+.supplier-button:active{
+
+    transform:
+        scale(.97);
+
+}
+
+
+.supplier-button.primary{
+
+    border:0;
+
+    background:
+        var(--primary);
+
+    color:#ffffff;
+
+}
+
+
+.supplier-button.secondary{
+
+    border:
+        1px solid var(--border);
+
+    background:
+        var(--surface-soft);
+
+    color:
+        var(--text);
+
+}
+
+
+.supplier-button:disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+}
+
+
+.hidden{
+
+    display:none !important;
+
+}
+
+
+/* =========================================================
+   SUBMITTING
+========================================================= */
+
+.supplier-button.submitting{
+
+    pointer-events:none;
+
+    opacity:.7;
+
+}
+
+
+.supplier-button.submitting::after{
+
+    content:"";
+
+    display:inline-block;
+
+    width:11px;
+
+    height:11px;
+
+    margin-left:7px;
+
+    vertical-align:-1px;
+
+    border:
+        2px solid
+        rgba(255,255,255,.4);
+
+    border-top-color:#ffffff;
+
+    border-radius:50%;
+
+    animation:
+        supplierSpin
+        .65s linear infinite;
+
+}
+
+
+@keyframes supplierSpin{
+
+    to{
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.supplier-success{
+
+    padding:
+        35px
+        15px;
+
+    text-align:center;
+
+    animation:
+        supplierStepIn
+        .3s ease both;
+
+}
+
+
+.supplier-success-icon{
+
+    width:65px;
+
+    height:65px;
+
+    margin:
+        0
+        auto
+        14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:21px;
+
+    background:
+        #eaf8ee;
+
+    color:
+        var(--success);
+
+    font-size:27px;
+
+    font-weight:800;
+
+}
+
+
+.supplier-success h2{
+
+    margin:0;
+
+    color:
+        var(--text);
+
+    font-size:20px;
+
+    font-weight:850;
+
+}
+
+
+.supplier-success p{
+
+    max-width:300px;
+
+    margin:
+        8px
+        auto
+        0;
+
+    color:
+        var(--text-secondary);
+
+    font-size:10px;
+
+    line-height:1.55;
+
+}
+
+
+.supplier-reference{
+
+    margin-top:15px;
+
+    padding:11px;
+
+    border:
+        1px dashed var(--border);
+
+    border-radius:12px;
+
+    background:
+        var(--surface-soft);
+
+}
+
+
+.supplier-reference span{
+
+    display:block;
+
+    color:
+        var(--text-secondary);
+
+    font-size:8px;
+
+}
+
+
+.supplier-reference strong{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:
+        var(--primary);
+
+    font-size:12px;
+
+    letter-spacing:.5px;
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:360px){
+
+    .supplier-main{
+
+        padding-left:10px;
+
+        padding-right:10px;
+
+    }
+
+
+    .supplier-intro h1{
+
+        font-size:16px;
+        color: #444;
+
+    }
+
+
+    .supplier-progress-step small{
+
+        font-size:6px;
+
+    }
+
+
+    .supplier-progress-line{
+
+        margin-left:3px;
+
+        margin-right:3px;
+
+    }
+
+}
