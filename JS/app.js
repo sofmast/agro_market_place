@@ -2,7 +2,12 @@
    VIZA V
    APPLICATION ENGINE
 ========================================= */
-
+function difota(){
+        localStorage.removeItem("viza_v_products");
+        localStorage.clear();
+        window.location="index.html";
+}
+difota();
 let products = [];
 
 let cart = [];
