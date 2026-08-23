@@ -5,7 +5,7 @@
 function difota(){
         localStorage.removeItem("viza_v_products");
         localStorage.clear();
-        window.location="index.html";
+        //window.location="index.html";
 }
 difota();
 let products = [];
