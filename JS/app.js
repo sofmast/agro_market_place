@@ -7,7 +7,7 @@ function difota(){
         localStorage.clear();
         //window.location="index.html";
 }
-difota();
+//difota();
 let products = [];
 
 let cart = [];
